@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 80" width="81" height="80">
+	<title>ssss-svg</title>
+	<defs>
+		<image  width="81" height="80" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAABQCAMAAABWDWmhAAAAAXNSR0IB2cksfwAAAQtQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4co3XAAAAFl0Uk5TAC9girPO4vYRZbDu/2QLWLH5VwVf09JcIL+8ImfzDKMz3Cvq6S0/8O9BD9jXAra0iElLDQ4q+B+gGfsakAHoQJjggKjRy83JnIwh/bco8SckI/T11VpPsmpmD24FAAAB20lEQVR4nO3Y11ICMRSA4YAg7ahgWxCRbgFsgNgoAhZQ7Iq+/5PojqKDnuwmJ9Gr/R/gmwkhZcOYk9NXLveExzvp8016PRNul6rmDwRDMFYoOOUnc9Mz4QggRcKz0xRvbn4B4z5aNOakwWiM75ktxSXB5YQ1CJAIyHgrSTvPLLkiDKbSIiBAOiUIZrJiIEAuLwSuromCAOsbAmChKA4ClAq24OaWDAiwvWkn7siBADs24K4sCFC2BCvC0/xdtqp1zGZW496rUcTaPl88oIAAB1zw8IgmHh3zxDoNBKhzwEaOKjYbuNiiggAtrfNidoKLbbrYRsEoHQSIYqKhIhqYSFqBozqYGFQRu5h4qiKeYWJTRUQnW+LA+l0TE0k72aja/4hKvyM6aoVFCFDExHMV8QITuyoi+g/vqIjoKtS/U+jfzfTvuKxHF3u4qP/kapBXTY5zurI+VexzQHZMvaUc8kT9NykWp4mXfFH/jZRVKbfmipXIytLg1a4lSBg3uuuMNZADB7YgK5RkwKL9Vxxj1zfi4PqtAMhYXvj2nM0IgYzdCX6xl+4FwT94VXjP/WDnPaJHi0XxJWswhp8slhlPfO/pWd4zG77g3suQ5pn5X7W+xH2m97XQycnpR2+HJK6uyN5W5wAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 16px;fill: #ffffff;font-weight: 400;font-family: "DejaVuSans", "DejaVu Sans" } 
+	</style>
+	<use id="Layer 1" href="#img1" x="0" y="0"/>
+	<text id="LOGO" style="transform: matrix(1,0,0,1,19,44)" >
+		<tspan x="0" y="0" class="t0">L</tspan><tspan  y="0" class="t0">O</tspan><tspan  y="0" class="t0">G</tspan><tspan  y="0" class="t0">O
+</tspan>
+	</text>
+</svg>

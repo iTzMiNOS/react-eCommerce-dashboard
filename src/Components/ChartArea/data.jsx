@@ -1,0 +1,57 @@
+export const areaData = {
+    title: "Sales Statistics",
+    dataKey:"name",
+    dataKey1:"Woo",
+    dataKey2:"Shopify",
+    dataKey3:"Amazon",
+    datas: [
+    {
+      name: 'Sun',
+      Woo: 4000,
+      Shopify: 2400,
+      Amazon: 2400,
+      Other: 1800,
+    },
+    {
+      name: 'Mon',
+      Woo: 3000,
+      Shopify: 1398,
+      Amazon: 2210,
+      Other: 1200,
+    },
+    {
+      name: 'Tue',
+      Woo: 2000,
+      Shopify: 9800,
+      Amazon: 2290,
+      Other: 2200,
+    },
+    {
+      name: 'Wed',
+      Woo: 2780,
+      Shopify: 3908,
+      Amazon: 2000,
+      Other: 1700,
+    },
+    {
+      name: 'Thu',
+      Woo: 1890,
+      Shopify: 4800,
+      Amazon: 2181,
+      Other: 2700,
+    },
+    {
+      name: 'Fri',
+      Woo: 2390,
+      Shopify: 3800,
+      Amazon: 2500,
+      Other: 1300,
+    },
+    {
+      name: 'Sat',
+      Woo: 3490,
+      Shopify: 4300,
+      Amazon: 2100,
+      Other: 2300,
+    },
+  ]};
