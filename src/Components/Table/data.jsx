@@ -13,25 +13,41 @@ export const columns = [
       editable: true,
     },
     {
-      field: 'age',
-      headerName: 'Age',
-      type: 'number',
-      width: 110,
-      editable: true,
+        field: 'email',
+        headerName: 'Mail Address',
+        width: 200,
+        editable: true,
     },
     {
-      field: 'fullName',
-      headerName: 'Full name',
-      description: 'This column has a value getter and is not sortable.',
-      sortable: false,
-      width: 160,
-      valueGetter: (params) =>
-        `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+        field: 'phone',
+        headerName: 'Phone Number',
+        width: 200,
+        editable: true,
     },
+    {
+        field: 'country',
+        headerName: 'Country',
+        width: 100,
+        editable: true,
+    },
+    {
+        field: 'created',
+        headerName: 'Joined Date',
+        width: 100,
+        editable: true,
+    },
+    {
+        field: 'customer',
+        headerName: 'Ordered',
+        type: "boolean",
+        width: 70,
+        editable: true,
+    },
+    
   ];
   
   export const rows = [
-    { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
+    { id: 1, lastName: 'Snow', firstName: 'Jon', email: "test@mail.com",phone: "432 312 3456", country: "USA",created:"22/10/2023", customer:true },
     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
     { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
     { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },

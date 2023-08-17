@@ -5,11 +5,13 @@ import './Users.css'
 export default function Users(){
     return (
         <div className="users">
-            <div className="info">
-                <h1 className="">Users</h1>
-                <button className="">Add New User</button>
+            <div className="info-container flex items-center gap-[20px] mb-[20px]">
+                <h1 className="text-2xl">Users</h1>
+                <button className="p-[5px] rounded-md transition ease-in-out delay-150 bg-white text-black hover:scale-105 hover:bg-gray-300 duration-300">
+                    Add New User
+                </button>
             </div>
-                <Table cols={columns} rows={rows}/>
+                <Table url="users" cols={columns} rows={rows}/>
         </div>
     )
 }

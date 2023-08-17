@@ -6,6 +6,7 @@ import Navbar from './Layout/Navbar/Navbar'
 import Menu from './Layout/Menu/Menu'
 import Footer from './Layout/Footer/Footer'
 import Login from './Pages/Login/Login'
+import 'react-notifications/lib/notifications.css';
 
 import {
   createBrowserRouter,

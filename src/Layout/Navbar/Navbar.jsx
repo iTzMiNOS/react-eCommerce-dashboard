@@ -14,7 +14,7 @@ export default function Navbar() {
                 <img src="/app.svg" className="icon hover:translate-y-[-2px]" />
                 <img src="/expand.svg" className="icon hover:translate-y-[-2px]" />
                 <img src="/notifications.svg" className="icon hover:translate-y-[-2px]"/>
-                <div className="notification relative flex ">
+                <div className="notif relative flex ">
                     <span className="bg-red-600 flex text-[12px] w-[10px] h-[10px] rounded-[50%] absolute top-[20px] right-[20px]"></span>
                 </div>
                 <div className="user flex items-center gap-[10px]">
