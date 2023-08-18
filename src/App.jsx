@@ -7,12 +7,16 @@ import Menu from './Layout/Menu/Menu'
 import Footer from './Layout/Footer/Footer'
 import Login from './Pages/Login/Login'
 import 'react-notifications/lib/notifications.css';
+import './Components/Table/mirage'
 
 import {
   createBrowserRouter,
   RouterProvider,
   Outlet
 } from "react-router-dom";
+import Integrations from './Pages/Integrations/Integrations'
+import SingleUser from './Pages/SingleUser/SingleUser'
+import SingleProd from './Pages/SingleProd/SingleProd'
 
 function App() {
 
@@ -43,12 +47,24 @@ function App() {
           element:<Home />
         },
         {
-          path:"/users",
+          path:"/customers",
           element:<Users />
         },
         {
           path:"/products",
           element:<Products />
+        },
+        {
+          path:"/integrations",
+          element:<Integrations />
+        },
+        {
+          path:"/customers/:id",
+          element:<SingleUser />
+        },
+        {
+          path:"/products/:id",
+          element:<SingleProd />
         },
       ]
     },

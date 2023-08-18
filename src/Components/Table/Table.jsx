@@ -36,7 +36,7 @@ export default function Table(props) {
                 initialState={{
                 pagination: {
                     paginationModel: {
-                    pageSize: 10,
+                    pageSize: 7,
                     },
                 },
                 }}

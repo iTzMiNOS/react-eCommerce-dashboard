@@ -12,7 +12,7 @@ export const sideMenu = [
             {
                 id: 2,
                 title: "Profile",
-                url: "/users/1",
+                url: "/Profile",
                 icon: "/profile.svg",
             },
         ],
