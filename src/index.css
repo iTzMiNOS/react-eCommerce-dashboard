@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 :root{
+    --main-bg: white;
+    --soft-bg: #ddd;
+    --dark-bg: #2a3447;
+
+    --main-text: #2a3447;
+    --soft-text: #384256;
+    --dark-text: #222b3c;
+
+    --btn-bg: #336699;
+    --btn-text: white;
+}
+:root.dark{
     --main-bg: #2a3447;
     --soft-bg: #384256;
     --dark-bg: #222b3c;
@@ -10,4 +22,7 @@
     --main-text: white;
     --soft-text: #ddd;
     --dark-text: #2a3447;
+
+    --btn-bg: white;
+    --btn-text: black;
 }

@@ -14,7 +14,7 @@ export default function ChartLine(props) {
                     <span>{props.title}</span>
                 </div>
                 <h1 className="xxl:text-[14px]">{props.datas.map(obj => obj.val).reduce((acc, cur) => acc + cur, 0)}</h1>
-                <Link tp="/" style={{color:props.color}}>View More</Link>
+                <Link to="/statistics" style={{color:props.color}}>View More</Link>
             </div>
             <div className="chart-info flex flex-[2] flex-col justify-between">
                 <div className="chart w-[100%] h-[100%]">
@@ -32,7 +32,7 @@ export default function ChartLine(props) {
                 </div>
                 <div className="text flex flex-col text-right">
                     <span className="percentage font-bold text-[20px]" style={{color:props.rate < 0 ? "tomato" : "limegreen"}}>{props.rate}%</span>
-                    <span className="time text-[14px]">This Week</span>
+                    <span className="time text-[14px]">{`This ${props.span}`}</span>
                 </div>
 
             </div>

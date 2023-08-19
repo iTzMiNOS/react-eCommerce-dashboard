@@ -1,6 +1,7 @@
 export const singleCustomer = {
     id: 1,
     title: "Customer",
+    chart: true,
     info: {
       username: "customer",
       fullname: "Customer Name",
@@ -81,6 +82,7 @@ export const singleCustomer = {
   export const singleProduct = {
     id: 1,
     title: "Spray",
+    chart: true,
     info: {
       productId: "spray1",
       color: "white",
@@ -162,6 +164,7 @@ export const singleCustomer = {
   export const singleInteg = {
     id: 1,
     title: "Woo",
+    chart: true,
     info: {
       productId: "Woo1",
       color: "white",
@@ -236,6 +239,45 @@ export const singleCustomer = {
       {
         text: "WooCommerce API Created Successfully",
         time: "2 months ago",
+      },
+    ],
+  };
+
+  export const singleOrder = {
+    id: 1,
+    title: "Spray",
+    chart: false,
+    info: {
+      productId: "spray1",
+      color: "white",
+      price: "$14.99",
+      producer: "gratis",
+      export: "turkey",
+    },
+    datas: {
+      dataKeys: [],
+      data:[],
+    },
+    activities: [
+      {
+        text: "Joe wrote a review on item",
+        time: "3 day ago",
+      },
+      {
+        text: "Item Was received by Joe",
+        time: "1 week ago",
+      },
+      {
+        text: "Item Was Shipped to Joe",
+        time: "2 weeks ago",
+      },
+      {
+        text: "Order approved",
+        time: "1 month ago",
+      },
+      {
+        text: "Order Created",
+        time: "1 month ago",
       },
     ],
   };

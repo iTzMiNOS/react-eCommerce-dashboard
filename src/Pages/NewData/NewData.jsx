@@ -61,7 +61,7 @@ export default function NewData(props) {
                 <span onClick={() => props.setOpen(false)} className="close absolute top-[10px] cursor-pointer right-[10px]">X</span>
                 <h1 className="mb-[40px] text-[24px] text-[color:var(--soft-text)]">Add new {props.url}</h1>
                 <form method="post" className="flex flex-wrap max-w-[500px] justify-between" onSubmit={submitData}>
-                    {props.cols.filter((element) => element.field !== "id" && element.field !== "created" && element.field !== "customer").map(col => (
+                    {props.cols.filter((element) => element.field !== "id" && element.field !== "created").map(col => (
                         <div key={col.id} className="item w-[47%] flex flex-col gap-[10px] mb-[20px]">
                             <label className="text-[14px]">{col.headerName}</label>
                             {col.type === 'boolean' ? (

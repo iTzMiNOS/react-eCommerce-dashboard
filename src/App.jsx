@@ -19,6 +19,9 @@ import SingleIntegration from './Pages/SingleIntegration/SingleIntegration'
 import Customers from './Pages/Customers/Customers'
 import SingleCustomer from './Pages/SingleCustomer/SingleCustomer'
 import Profile from './Pages/Profile/Profile'
+import Orders from './Pages/Orders/Orders'
+import SingleOrder from './Pages/SingleOrder/SingleOrder'
+import Statistics from './Pages/Statistics/Statistics'
 
 function App() {
 
@@ -65,6 +68,14 @@ function App() {
           element:<Profile />
         },
         {
+          path:"/orders",
+          element:<Orders />
+        },
+        {
+          path:"/statistics",
+          element:<Statistics />
+        },
+        {
           path:"/customers/:id",
           element:<SingleCustomer />
         },
@@ -75,6 +86,10 @@ function App() {
         {
           path:"/integrations/:id",
           element:<SingleIntegration />
+        },
+        {
+          path:"/orders/:id",
+          element:<SingleOrder />
         },
       ]
     },

@@ -46,11 +46,8 @@ export default function Table(props) {
     }
 
     function generateUniqueId() {
-        const timestamp = new Date().getTime(); // Get the current timestamp
-        const random = Math.random(); // Generate a random number
-      
-        // Convert the timestamp and random number to a string and concatenate them
-        // You can use any logic here to format the unique ID as needed
+        const timestamp = new Date().getTime();
+        const random = Math.random(); 
         const uniqueId = `${timestamp}${random}`;
       
         return uniqueId;
@@ -60,7 +57,7 @@ export default function Table(props) {
         <div className="table-container ">
             <DataGrid
                 getRowId={(row) => row.id || generateUniqueId()}
-                className="table-grid xxl:w-[100%] xl:w-[90%] lg:w-[90%] md:w-[85%] sm:w-[80%] bg-white p-[20px] "
+                className="table-grid mx-auto xxl:w-[100%] xl:w-[90%] lg:w-[90%] md:w-[85%] sm:w-[80%] bg-white p-[20px] "
                 rows={props.rows}
                 columns={[...props.cols, actionColumn]}
                 initialState={{

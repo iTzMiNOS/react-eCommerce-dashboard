@@ -1,6 +1,6 @@
 import React from 'react'
 import Table from '../../Components/Table/Table'
-import './Products.css'
+import './Orders.css'
 import NewData from '../NewData/NewData'
 import { ToastContainer, toast } from 'react-toastify'
 
@@ -31,38 +31,49 @@ const colsData = [
       type: "number",
       headerAlign: "center",
       align: "center",
-      width: 100,
+      width: 70,
       editable: true,
     },
     {
-        field: 'sold',
-        headerName: 'Sold Units',
-        type: "number",
-        align: "center",
-        width: 100,
-        editable: true,
+      field: 'profit',
+      headerName: 'Profit',
+      type: "number",
+      headerAlign: "center",
+      align: "center",
+      width: 70,
+      editable: true,
     },
     {
         field: 'created',
         headerName: 'Add Date',
         headerAlign: "center",
         align: "center",
-        width: 150,
+        width: 130,
         editable: true,
     },
     {
-      field: 'stock',
-      headerName: 'In Stock Units',
-      type: "number",
+      field: 'customer',
+      headerName: 'Customer',
+      headerAlign: "center",
       align: "center",
       width: 100,
       editable: true,
-  },]
+    },
+    {
+        field: 'shipped',
+        headerName: 'Shipped',
+        headerAlign: "center",
+        type: "boolean",
+        align: "center",
+        width: 70,
+        editable: true,
+    },
+]
 
-export default function Products(){
+export default function Orders(){
 
-    const [prods,setProds] = React.useState([])
-
+    const [orders,setOrders] = React.useState([])
+    
     const [isLoading, setIsLoading] = React.useState(false);
 
     const [toastr, setToastr] = React.useState(true);
@@ -77,29 +88,31 @@ export default function Products(){
         behavior: 'smooth'
         });
     }
-    
+
+
     React.useEffect(() => {
         if (!isLoading) {
-        fetch('/api/products')
+        fetch('/api/orders')
             .then(res => res.json())
-            .then(data => setProds(data.products))
+            .then(data => setOrders(data.orders))
             .catch(err => console.log(err))
             setIsLoading(true)
         }else if(toastr && toastrHelper){
-            fetch('/api/products')
+            fetch('/api/orders')
             .then(res => res.json())
-            .then(data => setProds(data.products))
+            .then(data => setOrders(data.orders))
             .catch(err => console.log(err))
             setToastr(false)
             if(toastrType === "delete") toast("Deleted Successfully!")
             else if(toastrType === "add") toast("Added Successfully!")
         }
-        },[prods, isLoading,toastr,toastrHelper,toastrType])
+        },[orders, isLoading,toastr,toastrHelper,toastrType])
+    
 
     const [open, setOpen] = React.useState(false)
     open ? document.body.style.overflow ="hidden" : document.body.style.overflow ="auto";
     return (
-        <div className="products">
+        <div className="orders">
             <ToastContainer
                 position="top-right"
                 autoClose={5000}
@@ -113,13 +126,13 @@ export default function Products(){
                 theme="light"
             />
             <div className="info-container flex items-center gap-[20px] mb-[20px]">
-                <h1 className="text-2xl">Products</h1>
+                <h1 className="text-2xl">Orders</h1>
                 <button onClick={() => {setOpen(true); scrollToTop();}} className="p-[5px] rounded-md transition ease-in-out delay-150 bg-white text-black hover:scale-105 hover:bg-gray-300 duration-300">
-                    Add New Product
+                    Add New Order
                 </button>
             </div>
-                <Table setToastrType={setToastrType} setToastrHelper={setToastrHelper} setToastr={setToastr} setIsLoading={setIsLoading} url="products" cols={colsData} rows={prods}/>
-                {open && <NewData setToastrType={setToastrType} setToastrHelper={setToastrHelper} setToastr={setToastr} setIsLoading={setIsLoading} url="product" cols={colsData} setOpen={setOpen}/>}
+                <Table setToastrType={setToastrType} setToastrHelper={setToastrHelper} setToastr={setToastr} setIsLoading={setIsLoading} url="orders" cols={colsData} rows={orders}/>
+                {open && <NewData setToastrType={setToastrType} setToastrHelper={setToastrHelper} setToastr={setToastr} setIsLoading={setIsLoading} url="order" cols={colsData} setOpen={setOpen}/>}
         </div>
     )
 }

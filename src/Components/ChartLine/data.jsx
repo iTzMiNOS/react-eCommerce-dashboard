@@ -4,6 +4,7 @@ export const leadData = {
   title:"Gained Leads",
   dataKey:"val",
   rate:41,
+  span: "Week",
   datas: [
     {name: "Sun", val: 120},
     {name: "Mon", val: 176},
@@ -20,6 +21,7 @@ export const salesData = {
   title:"Total sales",
   dataKey:"val",
   rate:13,
+  span: "Week",
   datas: [
     {name: "Sun", val: 20},
     {name: "Mon", val: 76},
@@ -36,6 +38,7 @@ export const orderData = {
   title:"Average Order",
   dataKey:"val",
   rate:-5,
+  span: "Week",
   datas: [
     {name: "Sun", val: 49},
     {name: "Mon", val: 38},
@@ -52,6 +55,7 @@ export const marketingData = {
   title:"Marketing Interactions",
   dataKey:"val",
   rate:4,
+  span: "Week",
   datas: [
     {name: "Sun", val: 220},
     {name: "Mon", val: 176},
@@ -60,5 +64,28 @@ export const marketingData = {
     {name: "Thu", val: 154},
     {name: "Fri", val: 190},
     {name: "Sat", val: 142},
+  ],
+};
+export const profileData = {
+  color: "#8884d8",
+  icon: "/userIcon.svg",
+  title:"Total Profit",
+  dataKey:"val",
+  rate:32,
+  span: "Year",
+  datas: [
+    {name: "January", val: 120},
+    {name: "February", val: 176},
+    {name: "March", val: 133},
+    {name: "April", val: 87},
+    {name: "May", val: 54},
+    {name: "June", val: 90},
+    {name: "July", val: 112},
+    {name: "August", val: 120},
+    {name: "September", val: 176},
+    {name: "October", val: 133},
+    {name: "November", val: 54},
+    {name: "December", val: 87},
+    
   ],
 };
