@@ -10,9 +10,6 @@ export default function Navbar() {
                 <span>LLM e-Commerce</span>
             </div>
             <div className="icons flex gap-[20px]">
-                <img src="/search.svg" className="icon sm:hidden md:flex hover:translate-y-[-2px]" />
-                <img src="/app.svg" className="icon sm:hidden md:flex hover:translate-y-[-2px]" />
-                <img src="/expand.svg" className="icon sm:hidden md:flex hover:translate-y-[-2px]" />
                 <img src="/notifications.svg" className="icon hover:translate-y-[-2px]"/>
                 <div className="notif relative flex ">
                     <span className="bg-red-600 flex text-[12px] w-[10px] h-[10px] rounded-[50%] absolute top-[20px] right-[20px]"></span>

@@ -67,6 +67,14 @@ export default function Integrations(){
     
     const [toastrHelper, setToastrHelper]  = React.useState(false);
 
+    const scrollToTop = () => {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        });
+    }
+
+
     React.useEffect(() => {
         if (!isLoading) {
         fetch('/api/integrations')
@@ -84,6 +92,7 @@ export default function Integrations(){
             else if(toastrType === "add") toast("Added Successfully!")
         }
         },[integrations, isLoading,toastr,toastrHelper,toastrType])
+    
 
     const [open, setOpen] = React.useState(false)
     open ? document.body.style.overflow ="hidden" : document.body.style.overflow ="auto";
@@ -103,12 +112,12 @@ export default function Integrations(){
             />
             <div className="info-container flex items-center gap-[20px] mb-[20px]">
                 <h1 className="text-2xl">Integrations</h1>
-                <button onClick={() => setOpen(true)} className="p-[5px] rounded-md transition ease-in-out delay-150 bg-white text-black hover:scale-105 hover:bg-gray-300 duration-300">
+                <button onClick={() => {setOpen(true); scrollToTop();}} className="p-[5px] rounded-md transition ease-in-out delay-150 bg-white text-black hover:scale-105 hover:bg-gray-300 duration-300">
                     Add New Integration
                 </button>
             </div>
                 <Table setToastrType={setToastrType} setToastrHelper={setToastrHelper} setToastr={setToastr} setIsLoading={setIsLoading} url="integrations" cols={colsData} rows={integrations}/>
-                {open && <NewData url="integration" cols={colsData} setOpen={setOpen}/>}
+                {open && <NewData setToastrType={setToastrType} setToastrHelper={setToastrHelper} setToastr={setToastr} setIsLoading={setIsLoading} url="integration" cols={colsData} setOpen={setOpen}/>}
         </div>
     )
 }
