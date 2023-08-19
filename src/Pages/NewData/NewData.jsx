@@ -69,7 +69,7 @@ export default function NewData(props) {
                             ) : (<input className="p-[10px] bg-transparent text-white outline-none border-[color:var(--soft-text)] border-solid border-[1px] rounded-[3px]" onChange={handleChange} name={col.field} type={col.type} value={formData[col.field] || ''} placeholder={col.placehold} />)}
                             </div>
                     ))}
-                    <button type="submit" className="w-[100%] p-[10px] text-black rounded-[3px] bg-white cursor-pointer">Submit</button>
+                    <button type="submit" className="w-[100%] p-[10px] bg-[color:var(--btn-bg)] text-[color:var(--btn-text)] rounded-[3px] cursor-pointer">Submit</button>
                 </form>
             </div>
         </div>
