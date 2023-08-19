@@ -158,3 +158,84 @@ export const singleUser = {
       },
     ],
   };
+
+  export const singleInteg = {
+    id: 1,
+    title: "Woo",
+    info: {
+      productId: "Woo1",
+      color: "white",
+      valid: "23/10/2024",
+      created: "04/11/2023",
+      link: "woo.myshop.com",
+    },
+    datas: {
+      dataKeys: [
+        { name: "visits", color: "#82ca9d" },
+        { name: "orders", color: "#8884d8" },
+      ],
+      data: [
+        {
+          name: "Sun",
+          visits: 4000,
+          orders: 2400,
+        },
+        {
+          name: "Mon",
+          visits: 3000,
+          orders: 1398,
+        },
+        {
+          name: "Tue",
+          visits: 2000,
+          orders: 3800,
+        },
+        {
+          name: "Wed",
+          visits: 2780,
+          orders: 3908,
+        },
+        {
+          name: "Thu",
+          visits: 1890,
+          orders: 4800,
+        },
+        {
+          name: "Fri",
+          visits: 2390,
+          orders: 3800,
+        },
+        {
+          name: "Sat",
+          visits: 3490,
+          orders: 4300,
+        },
+      ],
+    },
+    activities: [
+      {
+        text: "2 New customers Joined",
+        time: "3 day ago",
+      },
+      {
+        text: "12 Orders was filled this week",
+        time: "1 week ago",
+      },
+      {
+        text: "6 Orders was filled this week",
+        time: "2 weeks ago",
+      },
+      {
+        text: "X plugin was added to platform",
+        time: "1 month ago",
+      },
+      {
+        text: "Platform Optimization Done",
+        time: "1 month ago",
+      },
+      {
+        text: "WooCommerce API Created Successfully",
+        time: "2 months ago",
+      },
+    ],
+  };

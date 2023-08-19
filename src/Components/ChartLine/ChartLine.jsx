@@ -7,13 +7,13 @@ import {Link } from "react-router-dom"
 
 export default function ChartLine(props) {
     return (
-        <div className="chart-container flex h-[100%]">
-            <div className="box flex flex-[3] flex-col justify-between">
-                <div className="title flex items-center gap-[10px]">
+        <div className="chart-container sm:flex-col md:flex-col lg:flex-row flex h-[100%]">
+            <div className="box lg:gap-1 md:gap-[20px] sm:gap-[20px] flex flex-[3] flex-col justify-between">
+                <div className="title flex items-center gap-[10px] xxl:text-[14px]">
                     <img src={props.icon} />
                     <span>{props.title}</span>
                 </div>
-                <h1>{props.datas.map(obj => obj.val).reduce((acc, cur) => acc + cur, 0)}</h1>
+                <h1 className="xxl:text-[14px]">{props.datas.map(obj => obj.val).reduce((acc, cur) => acc + cur, 0)}</h1>
                 <Link tp="/" style={{color:props.color}}>View More</Link>
             </div>
             <div className="chart-info flex flex-[2] flex-col justify-between">

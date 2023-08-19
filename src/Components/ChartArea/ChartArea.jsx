@@ -7,7 +7,7 @@ import './ChartArea.css'
 export default function ChartArea(props) {
     return (
         <div className="chart-area w-[100%] h-[100%] flex flex-col justify-between">
-            <h1 className="">{props.title}</h1>
+            <h1 className="xxl:text-[24px]">{props.title}</h1>
             <div className="chart w-[100%] h-[300px]">
             <ResponsiveContainer width="99%" height="100%">
                 <AreaChart

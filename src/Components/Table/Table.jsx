@@ -2,15 +2,26 @@
 import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 import './Table.css'
 import { Link } from 'react-router-dom'
-
-
+import 'react-toastify/dist/ReactToastify.css'
 
 
 export default function Table(props) {
 
-    const deleteUser = (id) =>{
-        console.log(id + ' has been deleted');
-    }
+    const deleteItem = (id) => {
+        
+        fetch(`api/${props.url}/${id}`, {
+          method: "DELETE"
+        })
+          .then(res => {
+            if(!res.ok){
+                throw new Error("Something went wrong");
+            }
+          })
+          .catch(e => {
+            console.log(e);
+          });
+      };
+    
 
     const actionColumn ={
         field: 'actions',
@@ -21,7 +32,13 @@ export default function Table(props) {
                 <Link to={`/${props.url}/${params.row.id}`}>
                     <img className="w-[20px] h-[20px] cursor-pointer" src="/view.svg" />
                 </Link>
-                <div className="delete" onClick={() => deleteUser(params.row.id)}>
+                <div className="delete" onClick={() => {
+                        deleteItem(params.row.id);
+                        props.setIsLoading(false);
+                        props.setToastr(true);
+                        props.setToastrHelper(true);
+                        props.setToastrType("delete");
+                    }}>
                     <img className="w-[20px] h-[20px] cursor-pointer" src="/delete.svg" />
                 </div>
             </div>
@@ -30,7 +47,7 @@ export default function Table(props) {
     return (
         <div className="table-container ">
             <DataGrid
-                className="table-grid bg-white p-[20px] "
+                className="table-grid w-[80%] bg-white p-[20px] "
                 rows={props.rows}
                 columns={[...props.cols, actionColumn]}
                 initialState={{

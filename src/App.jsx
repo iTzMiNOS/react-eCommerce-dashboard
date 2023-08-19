@@ -17,15 +17,16 @@ import {
 import Integrations from './Pages/Integrations/Integrations'
 import SingleUser from './Pages/SingleUser/SingleUser'
 import SingleProd from './Pages/SingleProd/SingleProd'
+import SingleIntegration from './Pages/SingleIntegration/SingleIntegration'
 
 function App() {
 
   const Layout = ()=> {
     return (
-      <div className="main bg-[color:var(--main-bg)] font-[Inter] text-[color:var(--main-text)]">
+      <div className="main overflow-x-hidden bg-[color:var(--main-bg)] font-[Inter] text-[color:var(--main-text)]">
         <Navbar />
         <div className="container flex">
-          <div className="menu--container w-[250px] py-[5px] px-[20px] border-r-2 border-solid border-[color:var(--soft-bg)]">
+          <div className="menu--container xl:w-[250px] lg:w-max md:w-max sm:w-max py-[5px] px-[20px] border-r-2 border-solid border-[color:var(--soft-bg)]">
             <Menu />
           </div>
           <div className="content--container w-[100%] py-[5px] px-[20px]">
@@ -65,6 +66,10 @@ function App() {
         {
           path:"/products/:id",
           element:<SingleProd />
+        },
+        {
+          path:"/integrations/:id",
+          element:<SingleIntegration />
         },
       ]
     },
