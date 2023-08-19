@@ -13,6 +13,7 @@
 
     --btn-bg: #336699;
     --btn-text: white;
+    
 }
 :root.dark{
     --main-bg: #2a3447;
@@ -25,4 +26,7 @@
 
     --btn-bg: white;
     --btn-text: black;
+}
+body{
+    font-family: 'Inter', sans-serif;
 }
