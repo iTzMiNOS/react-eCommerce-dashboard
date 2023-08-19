@@ -9,12 +9,14 @@ const colsData = [
     {
         field: 'dispName',
         headerName: 'Display Name',
+        type: "text",
         width: 150,
         editable: true,
     },
     {
         field: 'shopAddress',
         headerName: 'Shop Address',
+        type: "text",
         width: 150,
         editable: true,
     },

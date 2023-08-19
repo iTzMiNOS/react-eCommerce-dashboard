@@ -3,9 +3,10 @@ import { createServer, Model } from "miragejs"
 
 createServer({
   models: {
-    customer: Model,
+    customers: Model,
     products: Model,
     integrations: Model,
+    profiles: Model,
   },
 
   routes() {
@@ -102,6 +103,21 @@ createServer({
     
       return schema.integrations.find(id).destroy()
     })
+
+
+    //profile
+    // eslint-disable-next-line no-unused-vars
+    this.get("/profiles", (schema) => {
+      const profile = schema.profiles.first();
+      return profile;
+    });
+    
+    this.patch("/profiles", (schema, request) => {
+      const newAttrs = JSON.parse(request.requestBody);
+      const profile = schema.profiles.first();
+      return profile.update(newAttrs);
+    });
+    
   },
   
 
@@ -134,5 +150,9 @@ createServer({
     server.create("integration", {id: 5, dispName: "shesshop.com", shopAddress: "ebay.shesshop.com", activeAPI: true, sync: false, visits: 74, orders: 10})
     server.create("integration", {id: 6, dispName: "theirshop.com", shopAddress: "hepsiburada.theirshop.com", activeAPI: true, sync: true, visits: 38, orders: 0})
     server.create("integration", {id: 7, dispName: "justshop.com", shopAddress: "trendyol.justshop.com", activeAPI: true, sync: true, visits: 105, orders: 4})
+    
+    //profile
+    server.create("profile", {id: 1, name: "Name",imgUrl:"https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", mailAddress: "name@mail.com", password:"somehash", subscription: "Gold", integrations: 7, created: "22/10/2022"})
+
   },
 })

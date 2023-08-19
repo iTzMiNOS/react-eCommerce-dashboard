@@ -75,8 +75,17 @@ export default function Products(){
     const [isLoading, setIsLoading] = React.useState(false);
 
     const [toastr, setToastr] = React.useState(true);
+
+    const [toastrType, setToastrType] = React.useState("");
     
     const [toastrHelper, setToastrHelper]  = React.useState(false);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        });
+    }
     
     React.useEffect(() => {
         if (!isLoading) {
@@ -91,9 +100,10 @@ export default function Products(){
             .then(data => setProds(data.products))
             .catch(err => console.log(err))
             setToastr(false)
-            toast("Deleted Successfully!")
+            if(toastrType === "delete") toast("Deleted Successfully!")
+            else if(toastrType === "add") toast("Added Successfully!")
         }
-        },[prods, isLoading,toastr,toastrHelper])
+        },[prods, isLoading,toastr,toastrHelper,toastrType])
 
     const [open, setOpen] = React.useState(false)
     open ? document.body.style.overflow ="hidden" : document.body.style.overflow ="auto";
@@ -113,12 +123,12 @@ export default function Products(){
             />
             <div className="info-container flex items-center gap-[20px] mb-[20px]">
                 <h1 className="text-2xl">Products</h1>
-                <button onClick={() => setOpen(true)} className="p-[5px] rounded-md transition ease-in-out delay-150 bg-white text-black hover:scale-105 hover:bg-gray-300 duration-300">
+                <button onClick={() => {setOpen(true); scrollToTop();}} className="p-[5px] rounded-md transition ease-in-out delay-150 bg-white text-black hover:scale-105 hover:bg-gray-300 duration-300">
                     Add New Product
                 </button>
             </div>
-                <Table setToastrHelper={setToastrHelper} setToastr={setToastr} setIsLoading={setIsLoading} url="products" cols={colsData} rows={prods}/>
-                {open && <NewData url="product" cols={colsData} setOpen={setOpen}/>}
+                <Table setToastrType={setToastrType} setToastrHelper={setToastrHelper} setToastr={setToastr} setIsLoading={setIsLoading} url="products" cols={colsData} rows={prods}/>
+                {open && <NewData setToastrType={setToastrType} setToastrHelper={setToastrHelper} setToastr={setToastr} setIsLoading={setIsLoading} url="product" cols={colsData} setOpen={setOpen}/>}
         </div>
     )
 }

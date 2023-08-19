@@ -1,6 +1,5 @@
 import './App.css'
 import Home from './Pages/Home/Home'
-import Users from './Pages/Users/Users'
 import Products from './Pages/Products/Products'
 import Navbar from './Layout/Navbar/Navbar'
 import Menu from './Layout/Menu/Menu'
@@ -15,9 +14,11 @@ import {
   Outlet
 } from "react-router-dom";
 import Integrations from './Pages/Integrations/Integrations'
-import SingleUser from './Pages/SingleUser/SingleUser'
 import SingleProd from './Pages/SingleProd/SingleProd'
 import SingleIntegration from './Pages/SingleIntegration/SingleIntegration'
+import Customers from './Pages/Customers/Customers'
+import SingleCustomer from './Pages/SingleCustomer/SingleCustomer'
+import Profile from './Pages/Profile/Profile'
 
 function App() {
 
@@ -49,7 +50,7 @@ function App() {
         },
         {
           path:"/customers",
-          element:<Users />
+          element:<Customers />
         },
         {
           path:"/products",
@@ -60,8 +61,12 @@ function App() {
           element:<Integrations />
         },
         {
+          path:"/profiles",
+          element:<Profile />
+        },
+        {
           path:"/customers/:id",
-          element:<SingleUser />
+          element:<SingleCustomer />
         },
         {
           path:"/products/:id",

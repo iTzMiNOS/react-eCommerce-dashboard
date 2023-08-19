@@ -1,10 +1,10 @@
-export const singleUser = {
+export const singleCustomer = {
     id: 1,
-    title: "Username",
+    title: "Customer",
     info: {
-      username: "username",
-      fullname: "User Name",
-      email: "user@mail.com",
+      username: "customer",
+      fullname: "Customer Name",
+      email: "customer@mail.com",
       phone: "321 452 4243",
       status: "verified",
     },
@@ -53,27 +53,27 @@ export const singleUser = {
     },
     activities: [
       {
-        text: "User Name purchased Spray",
+        text: "Customer Name purchased Spray",
         time: "3 day ago",
       },
       {
-        text: "User Name purchased Fan",
+        text: "Customer Name purchased Fan",
         time: "1 week ago",
       },
       {
-        text: "User Name Verified their Email Address",
+        text: "Customer Name Verified their Email Address",
         time: "2 weeks ago",
       },
       {
-        text: "User Name Verified their Payment Method",
+        text: "Customer Name Verified their Payment Method",
         time: "1 month ago",
       },
       {
-        text: "User Name Joined our Newsletter",
+        text: "Customer Name Joined our Newsletter",
         time: "2 month ago",
       },
       {
-        text: "User Name Joined",
+        text: "Customer Name Joined",
         time: "2 months ago",
       },
     ],
