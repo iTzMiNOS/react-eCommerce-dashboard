@@ -11,7 +11,7 @@ export default function SinglePage(props) {
                 <div className="info">
                     <div className="top-info flex items-center gap-[20px]">
                         <h1 className="font-[500] text-[32px]">{props.title}</h1>
-                        <button className="p-[5px] rounded-md transition ease-in-out delay-150 bg-white text-black hover:scale-105 hover:bg-slate-100 duration-300">Update</button>
+                        <button className="p-[5px] rounded-md transition ease-in-out delay-150 bg-[color:var(--btn-bg)] text-[color:var(--btn-text)] hover:scale-105 hover:bg-slate-100 duration-300">Update</button>
                     </div>
                     <div className="details text-[18px]">
                         {Object.entries(props.info).map((item) => (
