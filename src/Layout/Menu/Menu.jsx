@@ -35,7 +35,13 @@ export default function Menu() {
             <div className="mt-12">
                 <div className="mb-[10px] sm:block hidden">Dark Mode</div>
                 <Toggle
-                    onChange={toggleMode} className="ml-0 sm:ml-10"/>
+                    onChange={toggleMode}
+                    className="ml-0 sm:ml-10"
+                    icons={{
+                        checked: <img src="sun.svg" />,
+                        unchecked: <img src="moon.svg" />,
+                      }}
+                    />
             </div>
         </div>
     )
