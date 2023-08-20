@@ -26,7 +26,7 @@ export default function ChartPie(props) {
                     </PieChart>
                 </ResponsiveContainer>
             </div>
-            <div className="legends flex justify-between text-[12px] gap-[10px]">
+            <div className="legends sm:hidden lg:flex justify-between text-[12px] gap-[10px]">
                 {props.datas.map(element =>(
                     <div className="legend flex flex-col gap-[5px] items-center" key={element.name}>
                         <div className="title flex gap-[5px] items-center">

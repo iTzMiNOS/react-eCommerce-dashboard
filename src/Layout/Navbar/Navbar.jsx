@@ -10,13 +10,13 @@ export default function Navbar() {
                 <span>LLM e-Commerce</span>
             </div>
             <div className="icons text-[color:var(--soft-text)] flex gap-[20px]">
-                <img src="/notifications.svg" className="icon items-center h-[40px] mt-4 rounded-lg p-2 bg-[#336699] hover:translate-y-[-2px]"/>
+                <img src="/notifications.svg" className="icon sm:hidden lg:flex items-center h-[40px] mt-4 rounded-lg p-2 bg-[#336699] hover:translate-y-[-2px]"/>
                 
-                <div className="notif relative flex ">
+                <div className="notif relative sm:hidden lg:flex flex ">
                     <span className="bg-red-600 flex text-[12px] w-[10px] h-[10px] rounded-[50%] absolute top-[19px] right-[24px]"></span>
                 </div>
                 
-                <div className="user flex items-center gap-[10px]">
+                <div className="user flex sm:hidden lg:flex items-center gap-[10px]">
                     <img className="w-[26px] h-[26px] object-cover rounded-[50%]" src="/user-avatar.jpg" />
                     <span>Name</span>
                 </div>
