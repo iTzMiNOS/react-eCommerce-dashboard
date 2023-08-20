@@ -6,12 +6,12 @@ import './SinglePage.css'
 export default function SinglePage(props) {
 
     return (
-        <div className="single-page flex xxl:flex-row sm:flex-col xl:gap-[50px] md">
+        <div className="single-page flex xxl:flex-row flex-col xl:gap-[50px]">
             <div className="view flex-[1]">
                 <div className="info">
                     <div className="top-info flex items-center gap-[20px]">
                         <h1 className="font-[500] text-[32px]">{props.title}</h1>
-                        <button className="p-[5px] rounded-md transition ease-in-out delay-150 bg-[color:var(--btn-bg)] text-[color:var(--btn-text)] hover:scale-105 hover:bg-slate-100 duration-300">Update</button>
+                        <button className="p-[5px] rounded-md transition ease-in-out delay-150 bg-[color:var(--btn-bg)] text-[color:var(--btn-text)] hover:scale-105 hover:bg-[color:var(--btn-bg)] duration-300">Update</button>
                     </div>
                     <div className="details text-[18px]">
                         {Object.entries(props.info).map((item) => (
@@ -22,8 +22,8 @@ export default function SinglePage(props) {
                         ))}
                     </div>
                 </div>
-                <hr className="w-[90%] lg:block sm:hidden h-0 border-[0.5] border-solid border-gray-600 my-[20px] mx-0"/>
-                {props.chart && props.datas && <div className="chart lg:block sm:hidden mt-[50px] w-[80%] h-[400px]">
+                <hr className="w-[90%] lg:block hidden h-0 border-[0.5] border-solid border-gray-600 my-[20px] mx-0"/>
+                {props.chart && props.datas && <div className="chart lg:block hidden mt-[50px] w-[80%] h-[400px]">
                     <ResponsiveContainer width="100%" height="100%">
                         <LineChart
                         width={500}
@@ -53,7 +53,7 @@ export default function SinglePage(props) {
                 {props.activities && <ul>
                     {props.activities.map(act => (
                         <li key={act.text} className="list-none relative w-[1px] pt-[50px] bg-red-600 after:content-[''] after:absolute after:w-[10px] after:h-[10px] after:rounded-[50%] after:left-[50%] after:bottom-0 after:bg-red-600 after:translate-x-[-50%]">
-                            <div className="lg:min-w-[480px] sm:min-w-[250px] p-[15px] bg-[#f45b6810]">
+                            <div className="lg:min-w-[480px] min-w-[250px] p-[15px] bg-[#f45b6810]">
                                 <p className="mb-[5px]">{act.text}</p>
                                 <time className="text-[12px]">{act.time}</time>
                             </div>

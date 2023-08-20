@@ -114,7 +114,7 @@ export default function Products(){
             />
             <div className="info-container flex items-center gap-[20px] mb-[20px]">
                 <h1 className="text-2xl">Products</h1>
-                <button onClick={() => {setOpen(true); scrollToTop();}} className="p-[5px] rounded-md transition ease-in-out delay-150 bg-[color:var(--btn-bg)] text-[color:var(--btn-text)] hover:scale-105 hover:bg-gray-300 duration-300">
+                <button onClick={() => {setOpen(true); scrollToTop();}} className="p-[5px] rounded-md transition ease-in-out delay-150 bg-[color:var(--btn-bg)] text-[color:var(--btn-text)] hover:scale-105 hover:bg-[color:var(--btn-bg)] duration-300">
                     Add New Product
                 </button>
             </div>
