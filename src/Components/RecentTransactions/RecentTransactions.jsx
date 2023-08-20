@@ -1,8 +1,20 @@
+import React from 'react'
 import './RecentTransactions.css'
-import { transactions } from './Transactions'
+
 
 
 export default function RecentTransactions() {
+
+    const [transactions, setTransactions] = React.useState([])
+
+    React.useEffect(() => {
+        fetch('/api/transactions')
+        .then(res => res.json())
+        .then(data => setTransactions(data.transactions))
+        .catch(err => console.log(err))
+        }
+   )
+
     return (
         <div className="recent-transactions">
             <h1 className="mb-[20px] xxl:text-[24px]">Recent Orders</h1>

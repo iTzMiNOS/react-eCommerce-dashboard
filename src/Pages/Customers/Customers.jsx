@@ -109,8 +109,8 @@ export default function Customers(){
                 theme="light"
             />
             <div className="info-container flex items-center gap-[20px] mb-[20px]">
-                <h1 className="text-2xl">Customers</h1>
-                <button onClick={() => {setOpen(true); scrollToTop();}} className="p-[5px] rounded-md transition ease-in-out delay-150 bg-[color:var(--btn-bg)] text-[color:var(--btn-text)] hover:scale-105 hover:bg-[color:var(--btn-bg)] duration-300">
+                <h1 className="text-md sm:text-xl md:text-2xl">Customers</h1>
+                <button onClick={() => {setOpen(true); scrollToTop();}} className="p-[5px] text-[10px] sm:text-[14px] md:text-[16px] rounded-md transition ease-in-out delay-150 bg-[color:var(--btn-bg)] text-[color:var(--btn-text)] hover:scale-105 hover:bg-[color:var(--btn-bg)] duration-300">
                     Add New Customer
                 </button>
             </div>

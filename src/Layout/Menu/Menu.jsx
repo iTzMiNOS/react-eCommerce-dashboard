@@ -25,8 +25,8 @@ export default function Menu() {
             <div key={element.id} className="item flex flex-col gap-[10px] mb-[20px]">
                 <span className="title hidden sm:hidden lg:flex text-[12px] font-[200] text-[color:var(--soft-text)]">{element.title}</span>
                 {element.items.map(it => (
-                    <Link key={it.id} to={it.url} className="item-list flex items-center gap-[10px] p-[10px] hover:bg-[color:var(--soft-bg)]">
-                        <img src={it.icon} className="h-[30px] w-[30px] flex rounded-lg p-1 bg-[#336699]"/>
+                    <Link key={it.id} to={it.url} className="item-list flex items-center gap-[10px] p-[5px] hover:bg-[color:var(--soft-bg)] hover:rounded-lg">
+                        <img src={it.icon} className="h-[40px] w-[40px] flex rounded-md p-2 bg-[#336699]"/>
                         <span className="item-title hidden sm:hidden lg:flex">{it.title}</span>
                     </Link>
                 ))} 

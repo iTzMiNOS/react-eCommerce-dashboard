@@ -57,7 +57,7 @@ export default function Table(props) {
         <div className="table-container ">
             <DataGrid
                 getRowId={(row) => row.id || generateUniqueId()}
-                className="table-grid mx-auto xxl:w-[100%] xl:w-[90%] lg:w-[90%] md:w-[85%] sm:w-[80%] bg-white p-[20px] "
+                className="table-gri xxl:w-[100%] xl:w-[90%] lg:w-[90%] md:w-[85%] sm:w-[80%] w-[70%] bg-white p-[20px] "
                 rows={props.rows}
                 columns={[...props.cols, actionColumn]}
                 initialState={{

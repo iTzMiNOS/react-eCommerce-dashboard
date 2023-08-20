@@ -8,6 +8,7 @@ createServer({
     integrations: Model,
     profiles: Model,
     orders: Model,
+    transactions: Model,
   },
 
   routes() {
@@ -35,7 +36,7 @@ createServer({
     this.patch("/customers/:id", (schema, request) => {
       let newAttrs = JSON.parse(request.requestBody)
       let id = request.params.id
-      let customer = schema.product.find(id)
+      let customer = schema.customer.find(id)
     
       return customer.update(newAttrs)
     })
@@ -139,7 +140,7 @@ createServer({
     this.patch("/orders/:id", (schema, request) => {
       let newAttrs = JSON.parse(request.requestBody)
       let id = request.params.id
-      let order = schema.product.find(id)
+      let order = schema.order.find(id)
     
       return order.update(newAttrs)
     })
@@ -148,6 +149,38 @@ createServer({
     
       return schema.orders.find(id).destroy()
     })
+
+
+    //transactions
+    // eslint-disable-next-line no-unused-vars
+    this.get("/transactions", (schema, request) => {
+      return schema.transactions.all()
+    })
+    this.get("/transactions/:id", (schema, request) => {
+      let id = request.params.id
+    
+      return schema.transactions.find(id)
+    })
+    
+    this.post("/transactions", (schema, request) => {
+      let attrs = JSON.parse(request.requestBody)
+    
+      return schema.transactions.create(attrs)
+    })
+    
+    this.patch("/transactions/:id", (schema, request) => {
+      let newAttrs = JSON.parse(request.requestBody)
+      let id = request.params.id
+      let transaction = schema.transaction.find(id)
+    
+      return transaction.update(newAttrs)
+    })
+    this.delete("/transactions/:id", (schema, request) => {
+      let id = request.params.id
+    
+      return schema.transactions.find(id).destroy()
+    })
+
 
   },
   
@@ -193,6 +226,51 @@ createServer({
     server.create("order", { id: 5, name: 'Vitamin', source: "DHGate",market: "Hepsiburada",price: 14, profit: 91, created:"22/10/2023", customer: "dave", shipped: false})
     server.create("order", { id: 6, name: 'Perfume', source: "TaoBao",market: "Amazon",price: 15, profit: 15, created:"22/10/2023", customer: "joe", shipped: true})
     server.create("order", { id: 7, name: 'Mystery Box', source: "AliExpress",market: "Ebay",price: 29, profit: 41 ,created:"22/10/2023", customer: "shakil", shipped: true})
+    
+    //transactions
+    server.create("transaction", {
+      id: 1,
+      name: "customer 1",
+      platform: "wooCommerce",
+      value: "149.99",
+    })
+    server.create("transaction", {
+      id: 2,
+      name: "customer 2",
+      platform: "Amazon",
+      value: "49.99",
+    })
+    server.create("transaction", {
+      id: 3,
+      name: "customer 3",
+      platform: "Ebay",
+      value: "199.99",
+    })
+    server.create("transaction", {
+      id: 4,
+      name: "customer 4",
+      platform: "Shopify",
+      value: "9.99",
+    })
+    server.create("transaction", {
+      id: 5,
+      name: "customer 5",
+      platform: "Hepsiburada",
+      value: "1149.99",
+    })
+    server.create("transaction", {
+      id: 6,
+      name: "customer 6",
+      platform: "Shopify",
+      value: "209.99",
+    })
+    server.create("transaction", {
+      id: 7,
+      name: "customer 7",
+      platform: "wooCommerce",
+      value: "349.99",
+    })
+
 
   },
 })

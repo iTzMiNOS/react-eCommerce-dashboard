@@ -1,4 +1,4 @@
-export const transactions = [
+export const transacs = [
     {
         id: 1,
         name: "customer 1",
