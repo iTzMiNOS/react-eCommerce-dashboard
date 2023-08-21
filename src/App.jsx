@@ -11,7 +11,8 @@ import './Components/Table/mirage'
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet
+  Outlet,
+  Navigate
 } from "react-router-dom";
 import Integrations from './Pages/Integrations/Integrations'
 import SingleProd from './Pages/SingleProd/SingleProd'
@@ -22,6 +23,7 @@ import Profile from './Pages/Profile/Profile'
 import Orders from './Pages/Orders/Orders'
 import SingleOrder from './Pages/SingleOrder/SingleOrder'
 import Statistics from './Pages/Statistics/Statistics'
+import React from 'react'
 
 function App() {
 
@@ -42,10 +44,12 @@ function App() {
     )
   }
 
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Layout />,
+      element: isLoggedIn ? <Layout /> : <Navigate to="/login" />,
       children:[
         {
           path:"/",
@@ -94,8 +98,8 @@ function App() {
       ]
     },
     {
-      path: "/login",
-      element: <Login />
+      path: '/login',
+      element: <Login setIsLoggedIn={setIsLoggedIn} />
     }
   ]);
 
